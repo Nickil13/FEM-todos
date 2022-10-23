@@ -1,0 +1,39 @@
+@import "./base.css";
+
+:root {
+    --clr-primary: hsl(220, 98%, 61%);
+    --clr-primary-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+    --clr-dark-blue: hsl(235, 21%, 11%);
+    --clr-dark-desat-blue: hsl(235, 24%, 19%);
+    --clr-light-gray-blue: hsl(234, 39%, 85%);
+    --clr-light-gray-blue-hover: hsl(236, 33%, 92%);
+    --clr-dark-gray-blue: hsl(234, 11%, 52%);
+    --clr-very-dark-gray-blue: hsl(237, 14%, 26%);
+
+    --fs-body: 1.125rem;
+    --ff-primary: "Josefin Sans", sans-serif;
+}
+
+body {
+    font-family: var(--ff-primary);
+    background-color: var(--clr-dark-blue);
+    color: white;
+    /* font-size: var(--fs-body); */
+}
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.23em;
+    font-weight: bold;
+}
+main {
+    padding: 2.5rem 1.75rem;
+}
+
+button {
+    background: none;
+    border: none;
+}
+ul {
+    list-style: none;
+}
