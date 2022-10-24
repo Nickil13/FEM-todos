@@ -1,24 +1,41 @@
 @import "./base.css";
 
-:root {
-    --clr-primary: hsl(220, 98%, 61%);
-    --clr-primary-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
-
+:root.dark-theme {
+    --clr-base: hsl(235, 24%, 19%);
+    --clr-bg: hsl(235, 21%, 11%);
+    --clr-outline: hsl(237, 14%, 26%);
     --clr-dark-blue: hsl(235, 21%, 11%);
     --clr-dark-desat-blue: hsl(235, 24%, 19%);
     --clr-light-gray-blue: hsl(234, 39%, 85%);
     --clr-light-gray-blue-hover: hsl(236, 33%, 92%);
     --clr-dark-gray-blue: hsl(234, 11%, 52%);
     --clr-very-dark-gray-blue: hsl(237, 14%, 26%);
+}
+:root {
+    --clr-primary: hsl(220, 98%, 61%);
+    --clr-primary-bg: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 
     --fs-body: 1.125rem;
     --ff-primary: "Josefin Sans", sans-serif;
+
+    --shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
+}
+:root.light-theme {
+    --clr-base: white;
+    --clr-bg: hsl(0, 0%, 98%);
+    --clr-outline: hsl(233, 11%, 84%);
+    --clr-very-light-gray: hsl(0, 0%, 98%);
+    --clr-very-light-gray-blue: hsl(236, 33%, 92%);
+    --clr-light-gray-blue: hsl(233, 11%, 84%);
+    --clr-dark-gray-blue: hsl(236, 9%, 61%);
+    --clr-very-dark-gray-blue: hsl(235, 19%, 35%);
 }
 
 body {
     font-family: var(--ff-primary);
-    background-color: var(--clr-dark-blue);
-    color: white;
+    /* background-color: var(--clr-dark-blue); */
+    background-color: var(--clr-bg);
+    color: var(--clr-dark-gray-blue);
     /* font-size: var(--fs-body); */
 }
 h1 {
@@ -30,9 +47,22 @@ main {
     padding: 2.5rem 1.75rem;
 }
 
+.container {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
 button {
     background: none;
     border: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    font-size: inherit;
 }
 ul {
     list-style: none;
